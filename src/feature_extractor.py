@@ -24,6 +24,7 @@ class FeatureExtractor:
 
         print("Guardando características en archivos .pkl...")
 
+        os.makedirs('data/features', exist_ok=True)
         with open('data/features/sift_features.pkl', 'wb') as f:
             pickle.dump(sift_features, f)
 
